@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import HighlightText from "../atoms/HighlightText";
 
 const Root = styled.div`
   padding: 102px 102px 109px 102px;

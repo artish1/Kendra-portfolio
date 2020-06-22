@@ -1,18 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import NavBar from "../molecules/NavBar";
-import HighlightText from "../atoms/HighlightText";
+import HomeTitle from "../molecules/HomeTitle";
 
-const Root = styled.div``;
+const Root = styled.div`
+  margin: 0 auto;
+  max-width: 400px;
+  width: 100px;
+  height: 100%:
+`;
 
-const FillDiv = styled.div`
-  width: 110px;
+const CenterDiv = styled.div`
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const HomePage = () => {
   return (
     <Root>
-      <NavBar />
+      <CenterDiv>
+        <HomeTitle />
+      </CenterDiv>
     </Root>
   );
 };

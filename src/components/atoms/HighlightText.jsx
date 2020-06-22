@@ -3,13 +3,16 @@ import styled from "styled-components";
 
 const Root = styled.div`
   position: relative;
+//   width: ${(props) => props.width || "100%"};
+  height: ${(props) => props.height || "9px"};
+  margin: 0 auto;
 `;
 
 const HighlightBox = styled.div`
   position: absolute;
   background-color: #fada59;
 
-  width: 100%;
+  width: ${(props) => props.width || "100%"};
   height: ${(props) => props.height || "9px"};
   bottom: 2px;
   font-family: ${(props) => props.fontFamily || "Inter"};
@@ -37,25 +40,33 @@ class HighlightText extends React.Component {
   constructor(props) {
     super(props);
     this.textNode = React.createRef();
-    this.state = { highlightBoxHeight: 0 };
+    this.state = { highlightBoxHeight: 0, highlightBoxWidth: 0 };
   }
 
   componentDidMount() {
     console.log(this.textNode.current.clientHeight);
     const textHeight = this.textNode.current.clientHeight;
     const highlightHeight = Math.floor(textHeight * 0.6);
-    this.setState({ highlightBoxHeight: highlightHeight });
+    const textWidth = this.textNode.current.clientWidth;
+    this.setState({
+      highlightBoxHeight: highlightHeight,
+      highlightBoxWidth: textWidth,
+    });
   }
 
   render() {
     console.log(this.state);
     return (
-      <Root>
+      <Root
+        width={this.state.highlightBoxWidth + "px"}
+        height={this.state.highlightBoxHeight + "px"}
+      >
         <HighlightBox
+          width={this.state.highlightBoxWidth + "px"}
           height={this.state.highlightBoxHeight + "px"}
         ></HighlightBox>
         <Text ref={this.textNode} {...this.props}>
-          Hi I'm Kendra
+          {this.props.children}
         </Text>
       </Root>
     );
