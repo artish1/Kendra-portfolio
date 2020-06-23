@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import HomeTitle from "../molecules/HomeTitle";
 import HomeSubTitle from "../molecules/HomeSubTitle";
+import Projects from "../molecules/Projects";
 
 const Root = styled.div`
   margin: 0 auto;
-  max-width: 400px;
-//   width: 100px;
+  max-width: 502px;
   height: 100%:
 `;
 
@@ -27,6 +27,7 @@ const HomePage = () => {
         <HomeTitle />
         <HomeSubTitle />
       </CenterDiv>
+      <Projects />
     </Root>
   );
 };
