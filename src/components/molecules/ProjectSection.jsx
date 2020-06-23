@@ -62,7 +62,7 @@ const ProjectDescription = styled.p`
   transform: translateX(4px);
 `;
 
-const ProjectVisitButton = styled.div`
+const ProjectVisitButton = styled.a`
   width: 103px;
   height: 26px;
 
@@ -72,7 +72,7 @@ const ProjectVisitButton = styled.div`
 
   font-family: Inter;
   font-style: normal;
-  //   font-weight: bold;
+  font-weight: bold;
   font-size: 12px;
   line-height: 15px;
 
@@ -82,6 +82,7 @@ const ProjectVisitButton = styled.div`
 
   margin-top: 44px;
   cursor: pointer;
+  text-decoration: none;
 `;
 
 const ProjectSection = ({ title, description, url, images }) => {
@@ -102,7 +103,7 @@ const ProjectSection = ({ title, description, url, images }) => {
       </RealProjectContainer>
       <ProjectDescription>{description}</ProjectDescription>
 
-      <ProjectVisitButton>See more</ProjectVisitButton>
+      <ProjectVisitButton href={url}>See more</ProjectVisitButton>
     </Root>
   );
 };

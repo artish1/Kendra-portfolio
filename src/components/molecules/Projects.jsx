@@ -17,6 +17,7 @@ const Projects = () => {
           { text: "American Sign Language", width: 300 },
           { text: "learning platform", width: 210 },
         ]}
+        url={"https://www.google.com"}
         description="SignLingo provides a game-like experience learning American Sign Language"
       ></ProjectSection>
     </Root>
