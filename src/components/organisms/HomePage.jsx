@@ -3,6 +3,7 @@ import styled from "styled-components";
 import HomeTitle from "../molecules/HomeTitle";
 import HomeSubTitle from "../molecules/HomeSubTitle";
 import Projects from "../molecules/Projects";
+import Divider from "../atoms/Divider";
 
 const Root = styled.div`
   margin: 0 auto;
@@ -28,6 +29,8 @@ const HomePage = () => {
         <HomeSubTitle />
       </CenterDiv>
       <Projects />
+
+      <Divider />
     </Root>
   );
 };
