@@ -34,7 +34,7 @@ const Highlight = styled.div`
 `;
 
 const HighlightedTitle = (props) => {
-  const { children, highlightWidth, highlightHeight, width, height } = props;
+  const { children, highlightWidth, highlightHeight } = props;
   return (
     <Root {...props}>
       <Text {...props}>{children}</Text>
