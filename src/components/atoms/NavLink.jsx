@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const Root = styled.div`
-  margin-left: 35px;
+  margin-left: 30px;
   position: relative;
 
-  width: 20px;
+  width: 48px;
   height: 19px;
   cursor: pointer;
 `;

@@ -117,6 +117,8 @@ const HobbyList = styled.ul`
   height: 200px;
   list-style-type: circle;
   list-style: none;
+
+  transform: translateX(-1px);
 `;
 
 const Hobby = styled.li`
