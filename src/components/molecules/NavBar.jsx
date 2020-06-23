@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
+import NavLink from "../atoms/NavLink";
 
 const Root = styled.div`
   padding: 102px 102px 109px 102px;
@@ -42,13 +44,40 @@ const LinksContainer = styled.div`
 `;
 
 const NavBar = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const location = useLocation();
+
+  useEffect(() => {
+    const splitPath = location.pathname.split("/");
+    if (splitPath.length > 0) {
+      const firstPath = splitPath[1];
+      if (firstPath === "" || firstPath === "work") {
+        setSelectedIndex(0);
+      } else if (firstPath === "about") {
+        setSelectedIndex(1);
+      }
+    }
+  }, [location]);
+
   return (
     <Root>
       <NameTitle>Kendra McKernan</NameTitle>
 
       <LinksContainer>
-        <a href="https://www.google.com">Work</a>
-        <a href="https://www.google.com">About</a>
+        <NavLink
+          selected={selectedIndex === 0}
+          highlightWidth="45px"
+          href="https://www.google.com"
+        >
+          Work
+        </NavLink>
+        <NavLink
+          selected={selectedIndex === 1}
+          highlightWidth="45px"
+          href="https://www.google.com"
+        >
+          About
+        </NavLink>
       </LinksContainer>
     </Root>
   );

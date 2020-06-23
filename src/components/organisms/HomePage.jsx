@@ -4,6 +4,7 @@ import HomeTitle from "../molecules/HomeTitle";
 import HomeSubTitle from "../molecules/HomeSubTitle";
 import Projects from "../molecules/Projects";
 import Divider from "../atoms/Divider";
+import Footer from "../molecules/Footer";
 
 const Root = styled.div`
   margin: 0 auto;
@@ -31,6 +32,8 @@ const HomePage = () => {
       <Projects />
 
       <Divider />
+
+      <Footer />
     </Root>
   );
 };
