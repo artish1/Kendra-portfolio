@@ -17,7 +17,7 @@ const projects = [
       { text: "learning platform", width: 210 },
     ],
     images: [sign1Img, sign2Img, sign3Img],
-    url: "https://www.google.com",
+    url: "/work/sign-lingo",
     description:
       "SignLingo provides a game-like experience learning American Sign Language",
   },

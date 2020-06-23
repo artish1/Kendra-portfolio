@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 
 const Root = styled.div`
   margin-top: 80px;
@@ -13,7 +14,9 @@ const ImagesContainer = styled.div`
   margin-bottom: 16px;
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  width: 161.36px;
+`;
 
 const RealProjectContainer = styled.div``;
 const ProjectTitleContainer = styled.div`
@@ -62,7 +65,7 @@ const ProjectDescription = styled.p`
   transform: translateX(4px);
 `;
 
-const ProjectVisitButton = styled.a`
+const ProjectVisitButton = styled.div`
   width: 103px;
   height: 26px;
 
@@ -86,6 +89,10 @@ const ProjectVisitButton = styled.a`
 `;
 
 const ProjectSection = ({ title, description, url, images }) => {
+  const history = useHistory();
+  const handleClick = () => {
+    history.push(url);
+  };
   return (
     <Root>
       <ImagesContainer>
@@ -103,7 +110,7 @@ const ProjectSection = ({ title, description, url, images }) => {
       </RealProjectContainer>
       <ProjectDescription>{description}</ProjectDescription>
 
-      <ProjectVisitButton href={url}>See more</ProjectVisitButton>
+      <ProjectVisitButton onClick={handleClick}>See more</ProjectVisitButton>
     </Root>
   );
 };

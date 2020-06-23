@@ -4,6 +4,7 @@ import HomePage from "./components/organisms/HomePage";
 import NavBar from "./components/molecules/NavBar";
 import { Route } from "react-router-dom";
 import AboutPage from "./components/organisms/AboutPage";
+import SignLingoPage from "./components/organisms/SignLingoPage";
 
 function App() {
   return (
@@ -15,6 +16,10 @@ function App() {
 
       <Route exact path="/about">
         <AboutPage />
+      </Route>
+
+      <Route exact path="/work/sign-lingo">
+        <SignLingoPage />
       </Route>
     </div>
   );
