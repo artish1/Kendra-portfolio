@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-const Root = styled.a`
+const Root = styled.div`
   margin-left: 30px;
   position: relative;
 
   width: 20px;
   height: 19px;
+  cursor: pointer;
 `;
 
 const Highlight = styled.div`
@@ -17,7 +18,7 @@ const Highlight = styled.div`
   background: #fada59;
   z-index: 1;
 
-  transform: translate(-1px, -4px);
+  transform: translate(-2px, -4px);
 `;
 
 const NavText = styled.p`
@@ -34,7 +35,7 @@ const NavText = styled.p`
 
 const NavLink = (props) => {
   return (
-    <Root href={props.href}>
+    <Root onClick={props.onClick}>
       <NavText>{props.children}</NavText>
       {props.selected && <Highlight highlightWidth={props.highlightWidth} />}
     </Root>

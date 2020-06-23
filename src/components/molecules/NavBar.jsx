@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import NavLink from "../atoms/NavLink";
 
@@ -46,6 +46,7 @@ const LinksContainer = styled.div`
 const NavBar = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const location = useLocation();
+  const history = useHistory();
 
   useEffect(() => {
     const splitPath = location.pathname.split("/");
@@ -59,6 +60,10 @@ const NavBar = () => {
     }
   }, [location]);
 
+  const handleClick = (path) => {
+    history.push(path);
+  };
+
   return (
     <Root>
       <NameTitle>Kendra McKernan</NameTitle>
@@ -67,14 +72,14 @@ const NavBar = () => {
         <NavLink
           selected={selectedIndex === 0}
           highlightWidth="45px"
-          href="https://www.google.com"
+          onClick={() => handleClick("/")}
         >
           Work
         </NavLink>
         <NavLink
           selected={selectedIndex === 1}
-          highlightWidth="45px"
-          href="https://www.google.com"
+          highlightWidth="52px"
+          onClick={() => handleClick("/about")}
         >
           About
         </NavLink>
