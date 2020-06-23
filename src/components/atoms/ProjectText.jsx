@@ -9,10 +9,13 @@ const Root = styled.div`
   line-height: 144%;
 
   color: #494949;
+
+  margin-bottom: ${(props) => props.marginBottom || "0"}px;
+  margin-top: ${(props) => props.marginTop || "0"}px;
 `;
 
-const ProjectText = ({ children }) => {
-  return <Root>{children}</Root>;
+const ProjectText = (props) => {
+  return <Root {...props}>{props.children}</Root>;
 };
 
 export default ProjectText;
