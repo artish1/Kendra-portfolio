@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import HighlightText from "../atoms/HighlightText";
 
 const Root = styled.div`
   padding: 102px 102px 109px 102px;
@@ -48,8 +47,8 @@ const NavBar = () => {
       <NameTitle>Kendra McKernan</NameTitle>
 
       <LinksContainer>
-        <a href="#">Work</a>
-        <a href="#">About</a>
+        <a href="https://www.google.com">Work</a>
+        <a href="https://www.google.com">About</a>
       </LinksContainer>
     </Root>
   );

@@ -31,10 +31,6 @@ const Text = styled.h2`
 `;
 
 class HomeTitle extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <Root>
