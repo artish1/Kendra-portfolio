@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Root = styled.div`
-  margin-left: 30px;
+  margin-left: 35px;
   position: relative;
 
   width: 20px;
@@ -18,7 +18,7 @@ const Highlight = styled.div`
   background: #fada59;
   z-index: 1;
 
-  transform: translate(-2px, -4px);
+  transform: translate(-1px, -4px);
 `;
 
 const NavText = styled.p`

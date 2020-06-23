@@ -117,14 +117,6 @@ const HobbyList = styled.ul`
   height: 200px;
   list-style-type: circle;
   list-style: none;
-  & li::before {
-    content: "u\2022";
-    color: #494949;
-    font-weight: bold;
-    display: inline-block;
-
-    margin-left: 8px;
-  }
 `;
 
 const Hobby = styled.li`
@@ -135,13 +127,26 @@ const Hobby = styled.li`
   line-height: 145.5%;
 
   color: #494949;
+
+  &:before {
+    content: "•";
+    width: 1px;
+    transform: translateX(-20px);
+
+    color: #494949;
+    font-weight: bold;
+    display: inline-block;
+
+    margin-left: 8px;
+  }
 `;
 
 const AboutPage = () => {
   return (
     <Root>
       <AboutTitle>
-        My name is Kendra I like to leave things prettier than how I found them.
+        My name is Kendra. I like to leave things prettier than how I found
+        them.
       </AboutTitle>
 
       <FlexContainer>

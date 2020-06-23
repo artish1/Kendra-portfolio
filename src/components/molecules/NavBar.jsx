@@ -71,14 +71,14 @@ const NavBar = () => {
       <LinksContainer>
         <NavLink
           selected={selectedIndex === 0}
-          highlightWidth="45px"
+          highlightWidth="43px"
           onClick={() => handleClick("/")}
         >
           Work
         </NavLink>
         <NavLink
           selected={selectedIndex === 1}
-          highlightWidth="52px"
+          highlightWidth="50px"
           onClick={() => handleClick("/about")}
         >
           About
