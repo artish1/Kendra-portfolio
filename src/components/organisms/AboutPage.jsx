@@ -4,9 +4,9 @@ import styled from "styled-components";
 import kendraPic from "../../images/kendra_pic.jpg";
 
 const Root = styled.div`
-margin: 0 auto;
+  margin: 0 auto;
   max-width: 756px;
-  height: 100%:
+  height: 100%;
 `;
 
 const AboutTitle = styled.h1`

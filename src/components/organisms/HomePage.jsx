@@ -9,7 +9,7 @@ import Footer from "../molecules/Footer";
 const Root = styled.div`
   margin: 0 auto;
   max-width: 502px;
-  height: 100%:
+  height: 100%;
 `;
 
 const CenterDiv = styled.div`
