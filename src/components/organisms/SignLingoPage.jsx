@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import PicturesDisplay from "../molecules/PicturesDisplay";
 import HighlightedTitle from "../molecules/HighlightedTitle";
@@ -94,6 +95,7 @@ const ButtonContainer = styled.div`
 `;
 
 const SignLingoPage = () => {
+  const history = useHistory();
   return (
     <Root>
       <PicturesDisplay
@@ -511,7 +513,13 @@ const SignLingoPage = () => {
         project to make sure we were headed in the right direction.
       </ProjectText>
       <ButtonContainer>
-        <Button margin="48px 12px">
+        <Button
+          onClick={() => {
+            history.push("/work/recycle-iq");
+            window.scrollTo(0, 0);
+          }}
+          margin="48px 12px"
+        >
           Recycle IQ <ArrowIcon src={arrowIcon} />
         </Button>
       </ButtonContainer>

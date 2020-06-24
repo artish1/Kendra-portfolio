@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import HighlightedTitle from "../molecules/HighlightedTitle";
 import PicturesDisplay from "../molecules/PicturesDisplay";
@@ -104,6 +105,7 @@ const FlowImage = styled.img`
 `;
 
 const RecycleIQPage = () => {
+  const history = useHistory();
   return (
     <Root>
       <PicturesDisplay
@@ -562,7 +564,13 @@ my Alexa or Google. “"
       </ProjectText>
 
       <ButtonContainer>
-        <Button margin="48px 12px">
+        <Button
+          onClick={() => {
+            history.push("/work/wanderlust");
+            window.scrollTo(0, 0);
+          }}
+          margin="48px 12px"
+        >
           Wanderlust <ArrowIcon src={arrowIcon} />
         </Button>
       </ButtonContainer>
