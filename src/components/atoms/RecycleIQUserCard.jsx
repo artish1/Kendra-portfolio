@@ -31,6 +31,7 @@ const UserQuestion = styled.p`
 const UserAnswer = styled(UserQuestion)`
   font-weight: normal;
   margin-top: ${(props) => props.marginTop || "8"}px;
+  margin-right: 40px;
 `;
 
 const RecycleIQUserCard = (props) => {
@@ -38,7 +39,7 @@ const RecycleIQUserCard = (props) => {
     <Root>
       <UserImage src={props.image} />
       <div>
-        <UserQuestion>{props.question}</UserQuestion>
+        {props.question && <UserQuestion>{props.question}</UserQuestion>}
         <UserAnswer marginTop={props.answerMargin}>{props.answer}</UserAnswer>
       </div>
     </Root>
