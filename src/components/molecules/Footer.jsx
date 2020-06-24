@@ -83,9 +83,13 @@ const Footer = () => {
       </FooterTitleContainer>
 
       <Artifacts>
-        <ContactArtifact>Email</ContactArtifact>
+        <ContactArtifact href="mailto:KendraMcKernan@gmail.com">
+          Email
+        </ContactArtifact>
         <DotDivider />
-        <ContactArtifact>LinkedIn</ContactArtifact>
+        <ContactArtifact href="https://www.linkedin.com/in/kendra-mckernan/">
+          LinkedIn
+        </ContactArtifact>
       </Artifacts>
     </Root>
   );
