@@ -84,20 +84,6 @@ const ArtifactLink = styled.a`
 
 const DetailSection = styled.div``;
 
-const DetailIntro = styled.p`
-  width: 410px;
-  height: 66px;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 33px;
-
-  margin-bottom: 26px;
-  margin-top: 8px;
-  color: #494949;
-`;
-
 const HobbyTitle = styled.h3`
   font-family: Inter;
   font-style: normal;
