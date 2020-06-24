@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import VersionBox from "../atoms/VersionBox";
+
 const Root = styled.div`
   display: grid;
   grid-template-columns: repeat(
@@ -14,6 +16,19 @@ const Root = styled.div`
 
 const Picture = styled.img`
   width: ${(props) => props.width || "187.66"}px;
+  height: ${(props) => props.height}px;
+`;
+
+const Version = styled.p`
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #494949;
+  margin-bottom: 7px;
+  text-align: center;
 `;
 
 const PicturesDisplay = ({
@@ -21,6 +36,8 @@ const PicturesDisplay = ({
   marginBottom,
   columns,
   itemWidth,
+  itemHeight,
+  versioned,
   gap,
 }) => {
   return (
@@ -32,7 +49,23 @@ const PicturesDisplay = ({
     >
       {pictures &&
         pictures.map((pic, key) => (
-          <Picture width={itemWidth} key={key} src={pic} />
+          <div>
+            {versioned && (
+              <Version>{key === 2 ? "Final" : "V" + (key + 1)}</Version>
+            )}
+            <Picture
+              height={itemHeight}
+              width={itemWidth}
+              key={key}
+              src={versioned ? pic.image : pic}
+            />
+            {versioned && (
+              <VersionBox
+                accepted={pic.details.accepted}
+                text={pic.details.text}
+              />
+            )}
+          </div>
         ))}
     </Root>
   );

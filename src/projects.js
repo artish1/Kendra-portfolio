@@ -37,7 +37,7 @@ const projects = [
       { text: "advertising service", width: 237 },
     ],
     images: [wanderlust1Img, wanderlust2Img, wanderlust3Img],
-    url: "https://www.google.com",
+    url: "/work/wanderlust",
     description:
       "Wanderlust helps local tour guides advertise their private tours.",
   },

@@ -6,6 +6,7 @@ import { Route } from "react-router-dom";
 import AboutPage from "./components/organisms/AboutPage";
 import SignLingoPage from "./components/organisms/SignLingoPage";
 import RecycleIQPage from "./components/organisms/RecycleIQPage";
+import WanderlustPage from "./components/organisms/WanderlustPage";
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
 
       <Route exact path="/work/recycle-iq">
         <RecycleIQPage />
+      </Route>
+
+      <Route exact path="/work/wanderlust">
+        <WanderlustPage />
       </Route>
     </div>
   );
