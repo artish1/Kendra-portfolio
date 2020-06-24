@@ -172,10 +172,6 @@ const AboutPage = () => {
         </ProfileSection>
 
         <DetailSection>
-          <DetailIntro>
-            About me pages are cheesy. We all hate doing these, right?
-          </DetailIntro>
-
           <HobbyTitle>Here’s some stuff that I like to do -</HobbyTitle>
 
           <HobbyList>
