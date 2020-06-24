@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 import kendraPic from "../../images/kendra_pic.jpg";
 
+import resumePdf from "../../Resume.pdf";
+
 const Root = styled.div`
   margin: 0 auto;
   max-width: 756px;
@@ -153,7 +155,7 @@ const AboutPage = () => {
               LinkedIn
             </ArtifactLink>
             <DotDivider />
-            <ArtifactLink href="https://www.google.com">Resume</ArtifactLink>
+            <ArtifactLink href={resumePdf}>Resume</ArtifactLink>
           </Artifacts>
         </ProfileSection>
 
