@@ -24,6 +24,7 @@ const NameTitle = styled.h2`
   line-height: 19px;
 
   color: #252525;
+  cursor: pointer;l
 `;
 
 const LinksContainer = styled.div`
@@ -66,7 +67,14 @@ const NavBar = () => {
 
   return (
     <Root>
-      <NameTitle>Kendra McKernan</NameTitle>
+      <NameTitle
+        onClick={() => {
+          history.push("/");
+          window.scrollTo(0, 0);
+        }}
+      >
+        Kendra McKernan
+      </NameTitle>
 
       <LinksContainer>
         <NavLink
