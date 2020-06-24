@@ -6,7 +6,7 @@ const Root = styled.ul`
   margin-top: ${(props) => props.marginTop || "0"}px;
 
   li {
-    margin-bottom: ${(props) => props.spacing}px;
+    margin-bottom: ${(props) => props.spacing || "16"}px;
   }
 `;
 

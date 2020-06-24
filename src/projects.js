@@ -27,7 +27,7 @@ const projects = [
       { text: "recycling app", width: 168 },
     ],
     images: [recycle1Img, recycle2Img, recycle3Img],
-    url: "https://www.google.com",
+    url: "/work/recycle-iq",
     description:
       "Recycle IQ uses photo recognition software to help people identify items that are recyclable.",
   },
